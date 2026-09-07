@@ -34,11 +34,20 @@ public class PlayerController : MonoBehaviour
         // Rotate around local y (yaw) using the x component
         transform.Rotate(Vector3.up, Time.deltaTime * turnSpeed * moveInput.x);
 
-        if (Input.GetKeyDown(KeyCode.F) && mainCamera.enabled == true)
+        if (Input.GetKeyDown(KeyCode.C))
         {
-            mainCamera.enabled = !mainCamera.enabled;
-            camera2.enabled = !camera2.enabled;
-        } 
+            if (mainCamera.enabled == true)
+            {
+                mainCamera.enabled = !mainCamera.enabled;
+                camera2.enabled = !camera2.enabled;
+            }
+            else
+            {
+                mainCamera.enabled = !mainCamera.enabled;
+                camera2.enabled = !camera2.enabled;
+            }
+            
+        }
     }
   
 }
